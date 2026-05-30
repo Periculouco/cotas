@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Resgaute - Abrigo de Animais</title>
+
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Resgaute - Salvando Vidas com Amor">
+    <meta name="keywords" content="Resgaute - Salvando Vidas com Amor">
+    <meta name="author" content="Resgaute">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imagens/logonovo.png">
+    <link rel="apple-touch-icon" href="imagens/logonovo.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#F26C9D">
+    <link rel="stylesheet" href="style.css?v=1.4">
+
+    <!-- Preload de imagens críticas -->
+    <link rel="preload" as="image" href="imagens/logonovo.png" fetchpriority="high">
+    <link rel="preload" as="image" href="imagens/bannerresgaute.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="imagens/bannerajude.webp" fetchpriority="high">
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+<script>
+  window.pixelId = "69ae3ab43822e15c2b8b581f";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids async defer></script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '341469555068977');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=341469555068977&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+    <!-- Header rosa com logo 
+    <header class="site-header is-overlap">
+        <div class="site-header__accent"></div>
+        <div class="site-header__in">
+            <div class="brand-logo" aria-label="Resgaute — Abrigo de animais">
+                <img src="imagens/logoo.png" alt="Resgaute — Abrigo de animais" loading="eager" fetchpriority="high"
+                    decoding="sync">
+            </div>
+            opcional: botão de doação
+    <a href="#doar" class="btn-ghost">Doe agora</a> 
+        </div>
+    </header>-->
+
+    <!-- Banner Principal -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <img src="imagens/bannerajude.webp"
+                alt="Resgaute - Mais de 160 vidas abandonadas e esquecidas dependem de você!" class="banner-image"
+                loading="eager" fetchpriority="high" decoding="sync">
+        </div>
+    </section>
+
+    <main class="main-content">
+        <!-- Seção do Vídeo VSL -->
+        <section class="video-section">
+            <div class="container">
+                <div class="video-wrapper">
+                    <vturb-smartplayer id="vid-69a891dacd3128cb68068b92" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/6b7e5921-70a1-458b-b80c-4459923d051e/players/69a891dacd3128cb68068b92/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+                </div>
+            </div>
+
+
+            <!-- Modal CNPJ -->
+            <div id="cnpjModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="cnpjTitle">
+                <div class="modal__backdrop" data-close-modal></div>
+                <div class="modal__dialog" role="document">
+                    <div class="modal__header">
+                        <h3 id="cnpjTitle">Documento CNPJ</h3>
+                        <button class="modal__close" type="button" data-close-modal aria-label="Fechar">&times;</button>
+                    </div>
+                    <div class="modal__body">
+                        <img id="cnpjImage" src="" alt="Documento do CNPJ" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão Entenda Nosso Propósito 
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="transformation-cta-btn pulse-animation" onclick="scrollToAjudaAbrigo()">
+                    ENTENDA NOSSO PROPOSITO
+                </button>
+            </div>-->
+            
+            <br><button class="transformation-cta-btn pulse-animation" onclick="scrollToAjudaAbrigo()">
+                QUERO AJUDAR
+            </button>
+
+        </section>
+
+        <!--  <section class="crisis-section">
+            <div class="container">
+                <div class="crisis-card">
+                    <div class="crisis-highlight">
+                        <p>Nunca foi tão difícil manter cada vida de pé… nunca o desespero bateu tão perto da porta como agora.</p>
+                    </div>
+                    <p class="crisis-testimony">Todos os dias eu acordo com o mesmo pensamento que aperta o peito:</p>
+                    <p class="crisis-quote">“Meu Deus… como vou manter essas vidas?”</p>
+                </div>
+            </div>
+        </section>-->
+
+        <!-- Seção Entenda Nosso Propósito -->
+        <section class="save-shelter-section" id="ajude-o-abrigo">
+            <div class="container">
+                <h2 class="section-title">Entenda Nosso Propósito</h2>
+                <div class="banner2-container">
+                    <img src="imagens/bannerresgaute.webp" alt="Salve o Abrigo" class="banner2-image" loading="lazy"
+                        decoding="async">
+                </div>
+                <div class="save-message">
+                    <div class="save-story">
+                        <span class="save-story-label">Da inocência ao resgate</span>
+                        <p class="save-story-text">Me chamo Luana e desde criança tenho uma grande paixão pelos animais. Há quatro anos, dei vida ao Projeto Resgaute, uma missão de amor e esperança. Com fé em Deus e com o apoio de pessoas incríveis como você, já salvamos mais de <span
+                                class="highlight-number">4.500</span> vidas. 🐾</p>
+                    </div>
+                    <div class="save-spotlight">
+                        <div class="save-spotlight-card">
+                            <span class="save-spotlight-title">🐶 +4.500 vidas</span>
+                        </div>
+                        <div class="save-spotlight-card">
+                            <span class="save-spotlight-title">♥️ 500 animais</span>
+
+                        </div>
+                    </div>
+                    <div class="save-story-footnote">
+                        <p>Hoje, mais de <span class="highlight-number">500</span> animais resgatados dependem do nosso abrigo para não passar fome, receber cuidados e ter uma nova chance de ser feliz.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="transformation-cta-btn pulse-animation" onclick="scrollToDonation()">
+                        QUERO AJUDAR
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Ajude o Abrigo -->
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">Ajude o Abrigo</h2>
+
+                <!-- Carrossel Entenda Nosso Proposito -->
+                <div class="about-carousel" id="aboutCarousel">
+                    <div class="about-slide active">
+                        <div class="about-slide-content">
+                            <div class="about-slide-image">
+                                <img src="imagens/proposito/proposito1.webp" alt="Nossa História" loading="lazy" decoding="async">
+                            </div>
+                            <div class="about-slide-text">
+                                <h3>NOSSA HISTÓRIA</h3>
+                                <p>Há mais de quatro anos, o Resgaute dedica sua vida a salvar cães abandonados. Hoje,
+                                    mais
+                                    de 500 animais têm um lar seguro!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-slide">
+                        <div class="about-slide-content">
+                            <div class="about-slide-image">
+                                <img src="imagens/proposito/proposito2.webp" alt="Espaço e Obra" loading="lazy" decoding="async">
+                            </div>
+                            <div class="about-slide-text">
+                                <h3>SALVE UMA VIDA</h3>
+                                <p>Cada doação ajuda a crescer o abrigo e dar mais conforto e segurança para os animais que dependem de nós.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-slide">
+                        <div class="about-slide-content">
+                            <div class="about-slide-image">
+                                <img src="imagens/proposito/proposito3.webp" alt="Custos e Doações" loading="lazy" decoding="async">
+                            </div>
+                            <div class="about-slide-text">
+                                <h3>APOIO E ESPERANÇA</h3>
+                                <p>Manter mais de 500 vidas exige alimento, cuidados veterinários e abrigo todos os
+                                    dias. Sua ajuda mantém essa missão viva.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles do carrossel -->
+                <div class="about-controls">
+                    <button class="about-btn prev" onclick="prevAbout()">‹</button>
+                    <div class="about-indicators">
+                        <span class="about-indicator active" onclick="goToAbout(0)"></span>
+                        <span class="about-indicator" onclick="goToAbout(1)"></span>
+                        <span class="about-indicator" onclick="goToAbout(2)"></span>
+                    </div>
+                    <button class="about-btn next" onclick="nextAbout()">›</button>
+                </div>
+                
+            </div>
+
+        </section>
+
+
+        <!-- Seção Impacto da Ajuda -->
+        <section class="impact-donation-section">
+            <div class="container">
+                <h2 class="section-title">O impacto da sua ajuda</h2>
+                <div class="impact-section">
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <span class="impact-value">🩵 R$ 25</span>
+                            <span class="impact-description">Uma semana de alimento e esperança para um animal.</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-value">🩵 R$ 50</span>
+                            <span class="impact-description">Saúde e nutrição para 2 animais durante 10 dias.</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-value">🩵 R$ 100</span>
+                            <span class="impact-description">Um saco de ração de 10kg, o suficiente para alimentar 5
+                                vidas por 30 dias.</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-value">🩵 R$ 200</span>
+                            <span class="impact-description">Vacinas e vermífugos que protegem 4 animais contra
+                                doenças.</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-value">🩵 R$ 500</span>
+                            <span class="impact-description">Tratamento completo e digno por um mês para 3
+                                animais.</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-value">🩵 R$ 1.000</span>
+                            <span class="impact-description">Cirurgias de urgência e recuperação de animais em estado
+                                crítico.</span>
+                        </div>
+                    </div>
+                    <p class="impact-footer">Toda doação é um ato de amor. 🐾</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Doação PIX -->
+        <section class="donation-section" id="como-doar-pix">
+            <div class="container">
+                <h2 class="section-title">Ajudar via PIX</h2>
+                <div class="pix-image">
+                    <img src="imagens/otd3.png" alt="QR Code PIX" class="pix-qr" loading="lazy">
+                </div>
+                <div class="pix-container">
+                    <!--<div class="pix-instructions">
+                        <h3>Passos para apoiar a causa:</h3>
+                        <ol>
+                            <li>Copie a chave PIX clicando no botão abaixo</li>
+                            <li>Abra seu app bancário e escolha "PIX" → "Transferir"</li>
+                            <li>Cole a chave PIX e digite o valor que deseja contribuir</li>
+                            <li>Confirme e finalize - sua doação chegará instantaneamente!</li>
+                        </ol>
+                    </div>-->
+                    <div class="pix-key-container">
+                        <div class="pix-key" id="pixKey"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e5818a80a58487978c828a9780968284909180cb868a88">[email&#160;protected]</a></div>
+                        <div class="pix-recipient">Recebedor: <strong>RESGAUTE LTDA</strong></div>
+                        <button class="copy-btn pulse-animation"
+                            onclick="event.stopPropagation(); event.preventDefault(); copiarChavePix(); return false;"
+                            style="padding: 16px 22px; font-size: 18px; min-height: 56px;">
+                            <span class="copy-icon"></span>
+                            Copiar Chave PIX
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+        <!-- Seção Nova de Histórias de Transformação (Antes no Abrigo e Depois no Novo Lar) -->
+        <section class="new-transformation-section">
+            <div class="container">
+                <h2 class="section-title">Histórias de Transformação</h2>
+                <p class="new-transformation-subtitle">Estas são algumas das centenas de animais que conseguimos
+                    resgatar e reabilitar graças ao seu apoio.</p>
+
+                <div class="new-transformation-carousel" id="newTransformationCarousel">
+                    <!-- Transformação 9 -->
+                    <div class="new-transformation-item active">
+                        <div class="new-transformation-card">
+                            <div class="new-transformation-image">
+                                <img src="imagens/trans/trans9.webp" alt="Transformação - Do abrigo ao novo lar"
+                                    loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transformação 8 -->
+                    <div class="new-transformation-item">
+                        <div class="new-transformation-card">
+                            <div class="new-transformation-image">
+                                <img src="imagens/trans/trans8.webp" alt="Transformação - Do abrigo ao novo lar"
+                                    loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transformação 7 -->
+                    <div class="new-transformation-item">
+                        <div class="new-transformation-card">
+                            <div class="new-transformation-image">
+                                <img src="imagens/trans/trans7.webp" alt="Transformação - Do abrigo ao novo lar"
+                                    loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transformação 6 -->
+                    <div class="new-transformation-item">
+                        <div class="new-transformation-card">
+                            <div class="new-transformation-image">
+                                <img src="imagens/trans/trans6.webp" alt="Transformação - Do abrigo ao novo lar"
+                                    loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transformação 5 -->
+                    <div class="new-transformation-item">
+                        <div class="new-transformation-card">
+                            <div class="new-transformation-image">
+                                <img src="imagens/trans/trans5.webp" alt="Transformação - Do abrigo ao novo lar"
+                                    loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transformação 4 
+                    <div class="new-transformation-item">
+                        <div class="new-transformation-card">
+                            <div class="new-transformation-image">
+                                <img src="imagens/trans/trans4.webp" alt="Transformação - Do abrigo ao novo lar" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Transformação 3 -->
+                    <div class="new-transformation-item">
+                        <div class="new-transformation-card">
+                            <div class="new-transformation-image">
+                                <img src="imagens/trans/trans3.webp" alt="Transformação - Do abrigo ao novo lar"
+                                    loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transformação 2 -->
+                    <div class="new-transformation-item">
+                        <div class="new-transformation-card">
+                            <div class="new-transformation-image">
+                                <img src="imagens/trans/trans2.webp" alt="Transformação - Do abrigo ao novo lar"
+                                    loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transformação 1 -->
+                    <div class="new-transformation-item">
+                        <div class="new-transformation-card">
+                            <div class="new-transformation-image">
+                                <img src="imagens/trans/trans1.webp" alt="Transformação - Do abrigo ao novo lar"
+                                    loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles do carrossel -->
+                <div class="new-transformation-controls">
+                    <button class="new-transformation-btn prev" onclick="prevNewTransformation()">‹</button>
+                    <div class="new-transformation-indicators" id="newTransformationIndicators"></div>
+                    <button class="new-transformation-btn next" onclick="nextNewTransformation()">›</button>
+                </div>
+
+                <div class="new-transformation-message">
+                    <!--<p>Cada adoção é uma história de amor que transforma vidas. ❤️</p>-->
+                    <!--<button class="transformation-cta-btn pulse-animation" onclick="scrollToDonation()">
+                        QUERO AJUDAR
+                    </button>-->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Doação e Impacto 
+        <section class="doacao-impacto" aria-labelledby="doacao-impacto-title">
+            <div class="container">
+                <div style="text-align: center; ">
+                    <button class="transformation-cta-btn pulse-animation" onclick="scrollToDonation()">
+                        QUERO AJUDAR
+                    </button>
+                </div>
+                <div class="doacao-impacto__wrap">
+                    <ul class="doacao-impacto__lista" role="list">
+                        <li class="doacao-impacto__item">
+                            <span class="doacao-impacto__ico doacao-impacto__ico--neg" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M15 9l-6 6M9 9l6 6"></path>
+                                </svg>
+                            </span>
+                            <p><strong>Sem você</strong>, os potes ficam vazios</p>
+                        </li>
+
+                        <li class="doacao-impacto__item">
+                            <span class="doacao-impacto__ico doacao-impacto__ico--neg" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M15 9l-6 6M9 9l6 6"></path>
+                                </svg>
+                            </span>
+                            <p><strong>Sem você</strong>, o abrigo para. As contas vencem. O cuidado que salva todos os dias falha.</p>
+                        </li>
+
+                        <li class="doacao-impacto__item">
+                            <span class="doacao-impacto__ico doacao-impacto__ico--neg" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M15 9l-6 6M9 9l6 6"></path>
+                                </svg>
+                            </span>
+                            <p><strong>Sem você</strong>, mais de 500 cães resgatados, que já sofreram o abandono, ficam sem comida, sem tratamento e sem um lugar seguro para descansar.</p>
+                        </li>
+                    </ul>
+
+                    <div class="doacao-impacto__pos">
+                        <span class="doacao-impacto__ico doacao-impacto__ico--pos" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
+                        </span>
+                        <p><strong>Com você</strong>, cada patinha encontra proteção. Cada vida recebe cuidado. Cada história ganha uma nova chance de esperança 🐾💛</p>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+
+        <!-- Nova Seção de Depoimentos (Estilo Stories) -->
+        <section class="new-testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Adoção que transforma vidas</h2>
+                <!--<p class="new-testimonials-subtitle">Famílias felizes que encontraram amor incondicional através da
+                    adoção</p> -->
+
+                <div class="new-testimonials-carousel" id="newTestimonialsCarousel">
+                    <!-- Depoimento 8 -->
+                    <div class="new-testimonial-item active">
+                        <div class="new-testimonial-card">
+                            <div class="new-testimonial-image">
+                                <img src="imagens/dep/dep8.webp" alt="Depoimento de adoção" loading="lazy" decoding="async">
+                            </div>
+                            <div class="new-testimonial-content">
+                                <h4>Gustavo Martins</h4>
+                                <p class="pet-name">🐾 Adotou o <strong>Simba</strong></p>
+                                <p class="testimonial-text">"O Simba é incrível! Ele passou por muito, mas hoje é pura
+                                    felicidade. Ver essa transformação só me faz agradecer ao Resgaute todos os dias!
+                                    🙏"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 7 -->
+                    <div class="new-testimonial-item">
+                        <div class="new-testimonial-card">
+                            <div class="new-testimonial-image">
+                                <img src="imagens/dep/dep7.webp" alt="Depoimento de adoção" loading="lazy" decoding="async">
+                            </div>
+                            <div class="new-testimonial-content">
+                                <h4>Beatriz Costa</h4>
+                                <p class="pet-name">🐾 Adotou a <strong>Lola</strong></p>
+                                <p class="testimonial-text">"A Lola trouxe alegria para toda a família! Ela é carinhosa,
+                                    brincalhona e cheia de amor. Adotar foi a decisão mais bonita que já fizemos. 💕"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 6 -->
+                    <div class="new-testimonial-item">
+                        <div class="new-testimonial-card">
+                            <div class="new-testimonial-image">
+                                <img src="imagens/dep/dep6.webp" alt="Depoimento de adoção" loading="lazy" decoding="async">
+                            </div>
+                            <div class="new-testimonial-content">
+                                <h4>Marcos Almeida</h4>
+                                <p class="pet-name">🐾 Adotou o <strong>Rex</strong></p>
+                                <p class="testimonial-text">"Rex é meu melhor amigo! Ele estava em péssimas condições e
+                                    hoje é um cão saudável e feliz. O Resgaute faz um trabalho incrível. Muito
+                                    obrigado!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 5 -->
+                    <div class="new-testimonial-item">
+                        <div class="new-testimonial-card">
+                            <div class="new-testimonial-image">
+                                <img src="imagens/dep/dep5.webp" alt="Depoimento de adoção" loading="lazy" decoding="async">
+                            </div>
+                            <div class="new-testimonial-content">
+                                <h4>Julian Ferreira</h4>
+                                <p class="pet-name">🐾 Adotou a <strong>Mel</strong></p>
+                                <p class="testimonial-text">"A Mel é tudo pra mim! Ela estava desnutrida e hoje é uma
+                                    cachorrinha feliz e saudável. Adotar salvou duas vidas: a dela e a minha. ❤️"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 4 -->
+                    <div class="new-testimonial-item">
+                        <div class="new-testimonial-card">
+                            <div class="new-testimonial-image">
+                                <img src="imagens/dep/dep4.webp" alt="Depoimento de adoção" loading="lazy" decoding="async">
+                            </div>
+                            <div class="new-testimonial-content">
+                                <h4>Jessica Lima</h4>
+                                <p class="pet-name">🐾 Adotou o <strong>Bob</strong></p>
+                                <p class="testimonial-text">"O Bob é pura alegria! Adotá-lo foi receber um presente de
+                                    amor incondicional. O trabalho do Resgaute é simplesmente inspirador. Recomendo a
+                                    todos!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="new-testimonial-item">
+                        <div class="new-testimonial-card">
+                            <div class="new-testimonial-image">
+                                <img src="imagens/dep/dep3.webp" alt="Depoimento de adoção" loading="lazy" decoding="async">
+                            </div>
+                            <div class="new-testimonial-content">
+                                <h4>Camila Oliveira</h4>
+                                <p class="pet-name">🐾 Adotou a <strong>Nina</strong></p>
+                                <p class="testimonial-text">"A Nina chegou assustada e hoje é a companheira mais
+                                    amorosa. Ela trouxe luz para nossa família. Adotar é um ato de amor que transforma
+                                    vidas!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="new-testimonial-item">
+                        <div class="new-testimonial-card">
+                            <div class="new-testimonial-image">
+                                <img src="imagens/dep/dep2.webp" alt="Depoimento de adoção" loading="lazy" decoding="async">
+                            </div>
+                            <div class="new-testimonial-content">
+                                <h4>Felipe Santos</h4>
+                                <p class="pet-name">🐾 Adotou o <strong>Thor</strong></p>
+                                <p class="testimonial-text">"O Thor transformou minha vida! Ele é protetor, carinhoso e
+                                    cheio de energia. Não consigo imaginar meus dias sem ele. Gratidão eterna ao
+                                    Resgaute!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 1 -->
+                    <div class="new-testimonial-item">
+                        <div class="new-testimonial-card">
+                            <div class="new-testimonial-image">
+                                <img src="imagens/dep/dep1.webp" alt="Depoimento de adoção" loading="lazy" decoding="async">
+                            </div>
+                            <div class="new-testimonial-content">
+                                <h4>Amanda Rodrigues</h4>
+                                <p class="pet-name">🐾 Adotou a <strong>Belinha</strong></p>
+                                <p class="testimonial-text">"Adotar a Belinha foi a melhor decisão que já tomei! Ela
+                                    chegou com medo, mas hoje é a rainha da casa. Obrigada Resgaute por me dar essa
+                                    alegria!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles do carrossel -->
+                <div class="new-testimonials-controls">
+                    <button class="new-testimonials-btn prev" onclick="prevNewTestimonial()">‹</button>
+                    <div class="new-testimonials-indicators" id="newTestimonialsIndicators"></div>
+                    <button class="new-testimonials-btn next" onclick="nextNewTestimonial()">›</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Seção Localização -->
+        <section class="location-section">
+            <div class="container">
+                <h2 class="section-title">Nossa Localização</h2>
+
+                <div class="location-content">
+                    <div class="map-container">
+                        <div class="map-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.912985630355!2d-47.02202282385701!3d-23.60231826365659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf0001f84a6d3d%3A0x6e08c4f6d6d7a8df!2sVargem%20Grande%20Paulista%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1733675550000!5m2!1spt-BR!2sbr"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Localização - Vargem Grande Paulista, SP">
+                            </iframe>
+
+                            <div class="map-overlay">
+                                <div class="map-info">
+                                    <h4>📍 Resgaute</h4>
+                                    <p>Vargem Grande Paulista - SP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="location-info">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Informações da Organização (substituindo Meta de Doação) -->
+        <section class="donation-goal-section">
+            <div class="container">
+                <div class="p-campaign-byline">
+                    <div class="m-campaign-byline">
+                        <div class="hrt-align-center hrt-disp-flex">
+                            <ul class="hrt-list-unstyled hrt-avatar-stack hrt-mr-2">
+                                <li class="hrt-avatar-stack-item hrt-avatar-stack-item--0">
+                                    <div class="hrt-avatar hrt-avatar--large">
+                                        <img src="imagens/logo.webp" alt="Resgaute" class="hrt-avatar-img">
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="m-campaign-byline-description">
+                                Resgaute
+                            </div>
+                        </div>
+
+                        <section class="org-card" aria-label="Informações da organização">
+                            <div class="org-card__left" style="text-align: left;">
+                                <div class="org-card__row">
+                                    <span class="org-card__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                            <path
+                                                d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
+                                        </svg>
+                                    </span>
+                                    <div class="org-card__text">
+                                        <strong>Localização</strong>
+                                        <span>Vargem Grande Paulista, SP · Brasil</span>
+                                    </div>
+                                </div>
+
+                                <div class="org-card__row">
+                                    <span class="org-card__icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                            <path d="M3 5h18v14H3zM5 8h8v2H5zm0 4h6v2H5zm10 1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                                        </svg>
+                                    </span>
+                                    <div class="org-card__text">
+                                        <strong>CNPJ</strong>
+                                        <button id="cnpjTrigger2" class="org-card__cnpj" type="button" aria-haspopup="dialog"
+                                            aria-controls="cnpjModal" data-img="imagens/cnpj.png">
+                                            58.439.069/0001-04
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="org-card__right">
+                                <span class="org-card__badge" aria-label="Organização verificada">
+                                    ✅ Documentação disponível
+                                </span>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Perguntas Frequentes
+        <section class="faq-doacoes" aria-labelledby="faqTitle">
+            <div class="container">
+                <div class="faq-container">
+                    <h2 id="faqTitle" class="section-title">Perguntas frequentes 🩵</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Como as doações são utilizadas?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>As doações são usadas para custear alimentação, cuidados veterinários, remédios, tratamentos e contas básicas do abrigo Resgaute. Cada valor recebido ajuda diretamente os mais de 500 animais resgatados.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Quem mantém e administra o Resgaute?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O abrigo é mantido por doações e administrado por Luana e uma equipe dedicada de voluntários e colaboradores que trabalham todos os dias para garantir o bem-estar dos animais resgatados.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>As doações realmente fazem diferença?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim! Cada contribuição, por menor que pareça, ajuda a manter o abrigo funcionando — desde a ração diária até os cuidados veterinários e o carinho que cada animal recebe. Já salvamos mais de 4.500 vidas graças ao apoio de pessoas como você.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>As doações são seguras?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, as doações são processadas por plataformas seguras e auditadas. Utilizamos PIX para garantir transparência e segurança em cada transação.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Como posso acompanhar o impacto da minha doação?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Publicamos regularmente atualizações nas redes sociais e no site, mostrando as melhorias, conquistas e histórias reais dos animais beneficiados. Transparência e gratidão são pilares da nossa missão.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Seção Comunidade WhatsApp -->
+        <section class="whatsapp-community-section">
+            <div class="container">
+                <div class="whatsapp-card">
+                    <div class="whatsapp-header">
+                        <h3>Acompanhe a Resgaute 🩵</h3>
+                        <p class="whatsapp-subtitle">Comunidade no WhatsApp</p>
+                    </div>
+
+                    <div class="whatsapp-image">
+                        <img src="imagens/bannerresgaute-2.webp" alt="Resgaute" loading="lazy" decoding="async">
+                    </div>
+
+                    <a href="https://chat.whatsapp.com/FgSLsMD46wL2RTJuXV5Vxm" target="_blank" rel="noopener"
+                        class="whatsapp-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                                fill="currentColor" />
+                        </svg>
+                        Entrar na comunidade
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Call to Action Final -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Faça Parte Desta História</h2>
+                <p>Cada doação, cada compartilhamento, cada gesto de amor faz a diferença na vida de centenas de animais
+                    que dependem da nossa ajuda.</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                    <button class="transformation-cta-btn pulse-animation" onclick="scrollToDonation()">
+                        QUERO AJUDAR
+                    </button>
+                </div>
+            
+        </section>
+
+        <!-- Seção Banner História 
+        <section class="historia-banner-section">
+            <div class="historia-banner-container">
+                <img src="imagens/historia.webp" alt="Nossa História" class="historia-banner-image" loading="lazy" decoding="async">
+            </div>
+        </section>-->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <!-- Logo + nome -->
+                <div class="footer-brand">
+                    <div class="brand-logo footer-logo" aria-label="Resgaute — Abrigo de animais">
+                        <img src="imagens/logonovo.png" alt="Resgaute — Abrigo de animais">
+                    </div>
+                    <h3>Resgaute</h3>
+                    <!--<p class="footer-tagline">
+                        Dedicados a salvar e cuidar de animais vítimas de abandono e maus-tratos, oferecendo uma segunda
+                        chance para cada vida.
+                    </p> -->
+                </div>
+
+                <!-- Blocos -->
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>Contato</h4>
+                        <p>WhatsApp: <a class="footer-link" href="https://wa.me/5515991903786" target="_blank"
+                                rel="noopener"> +55 13 97409-1379</a></p>
+                        <p>Email: <a class="footer-link" href="/cdn-cgi/l/email-protection#36454346594442537644534551574342531855595b"><span class="__cf_email__" data-cfemail="1e6d6b6e716c6a7b5e6c7b6d797f6b6a7b307d7173">[email&#160;protected]</span></a></p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Redes Sociais</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61578116921336" target="_blank"
+                                rel="noopener" class="social-link" aria-label="Facebook">
+                                <span class="si si-fb" aria-hidden="true"></span><span>Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/resgaute_reserva/" target="_blank" rel="noopener"
+                                class="social-link" aria-label="Instagram">
+                                <span class="si si-ig" aria-hidden="true"></span><span>Instagram</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@resgaute" target="_blank" rel="noopener"
+                                class="social-link" aria-label="TikTok">
+                                <span class="si si-tk" aria-hidden="true"></span><span>TikTok</span>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Como Ajudar</h4>
+                        <a href="#" class="footer-link">Doações PIX</a>
+                        <a href="#" class="footer-link">Adoção Responsável</a>
+                        <a href="#" class="footer-link">Voluntariado</a>
+                        <a href="#" class="footer-link">Apadrinhamento</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 RESGAUTE. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para salvar vidas</p>
+                <p>58.439.069/0001-04</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Botão WhatsApp Flutuante 
+    <div class="whatsapp-float" id="whatsappFloat">
+        <a href="https://wa.me/551151989296?text=Ol%C3%A1!%20Gostaria%20de%20ajudar%" 
+           target="_blank" 
+           class="whatsapp-btn"
+           aria-label="Entrar em contato via WhatsApp">
+            <svg viewBox="0 0 24 24" class="whatsapp-icon">
+                <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.106"/>
+            </svg>
+            <span class="whatsapp-text">Fale Conosco</span>
+        </a>
+        <div class="whatsapp-tooltip">
+            Tire suas dúvidas ou faça sua doação via WhatsApp!
+        </div>
+    </div> -->
+
+    <!-- Donation Modal -->
+    <div id="donationModal" class="donation-modal">
+        <div class="modal-content">
+            <!-- ETAPA 1: Seleção de Valor -->
+            <div id="donationStep1" class="donation-step">
+                <div class="modal-header">
+                    <h2>Qual valor deseja ajudar?</h2>
+                    <button class="close-btn" onclick="closeDonationModal()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Sistema de Abas - Dentro da Etapa 1, embaixo do título -->
+                <div class="donation-tabs" id="donationTabs">
+                    <button class="donation-tab active" id="tabUnica" onclick="switchDonationTab('unica')">
+                        Doação Única
+                    </button>
+                    <button class="donation-tab" id="tabMensal" onclick="switchDonationTab('mensal')">
+                        Doação Mensal
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="donation-grid">
+                        <button class="donation-btn" data-value="20" onclick="selectDonationAmount(20)">R$ 20</button>
+                        <button class="donation-btn" data-value="30" onclick="selectDonationAmount(30)">R$ 30</button>
+                        <button class="donation-btn" data-value="50" onclick="selectDonationAmount(50)">R$ 50</button>
+                        <button class="donation-btn" data-value="100" onclick="selectDonationAmount(100)">R$
+                            100</button>
+                        <button class="donation-btn" data-value="150" onclick="selectDonationAmount(150)">R$
+                            150</button>
+                        <button class="donation-btn" data-value="250" onclick="selectDonationAmount(250)">R$
+                            250</button>
+                        <button class="donation-btn" data-value="500" onclick="selectDonationAmount(500)">R$
+                            500</button>
+                        <button class="donation-btn" data-value="1000" onclick="selectDonationAmount(1000)">R$
+                            1.000</button>
+                    </div>
+
+                    <div class="custom-donation">
+                        <p>Ou o que o seu coração sentir<span class="heart">🩵</span></p>
+                        <div class="input-container">
+                            <span class="currency-symbol">R$</span>
+                            <input type="number" id="customAmount" placeholder="Digite o valor" min="1"
+                                onkeyup="handleCustomAmount()">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="donate-btn" onclick="goToStep2()">CONTINUAR</button>
+                </div>
+            </div>
+
+            <!-- ETAPA 2: Preenchimento de Dados - DOAÇÃO ÚNICA -->
+            <div id="donationStep2Unica" class="donation-step" style="display: none;">
+                <div class="modal-header">
+                    <h2>Complete seus dados</h2>
+                    <button class="close-btn" onclick="closeDonationModal()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Indicador de Tipo de Doação na Etapa 2 -->
+                <div class="donation-type-indicator">
+                    <span>Doação Única</span>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Valor selecionado -->
+                    <div class="selected-amount-display">
+                        <p class="amount-value" id="selectedAmountDisplay">R$ 0,00</p>
+                    </div>
+
+                    <!-- Telefone -->   
+                    <div class="form-group">
+                        <label for="donorPhone">Telefone (WhatsApp): <span style="font-size: 0.85rem; color: #6b7280; font-weight: normal;">opcional</span></label>
+                        <input type="tel" id="donorPhone" placeholder="(00) 00000-0000" maxlength="15">
+                    </div>
+
+                    <!-- Turbinar doação -->
+                    <div class="form-group">
+                        <label class="checkbox-label-turbine">
+                            <input type="checkbox" id="addAdministrativeFee" onchange="handleAdministrativeFee()">
+                            <span class="turbine-title">
+                                <svg class="heart-icon" width="16" height="16" viewBox="0 0 24 24" fill="#ec4899"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                Turbinar doação
+                            </span>
+                            <p class="turbine-description">Adicionar R$ 6,99 para ajudar com as taxas administrativas</p>
+                        </label>
+                        
+                    </div>
+
+                    <!-- Mensagem (Opcional) -->
+                    <div class="form-group" style="display: none;">
+                        <label for="donorMessage">Mensagem (opcional):</label>
+                        <textarea id="donorMessage" placeholder="Deixe uma mensagem de carinho para os animais..."
+                            rows="3" maxlength="500"></textarea>
+                        <span class="char-count"><span id="charCount">0</span>/500</span>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="donate-btn" onclick="generateContribution()">CONTRIBUIR</button>
+                    <button class="back-btn" onclick="goBackToStep1()">← VOLTAR</button>
+                </div>
+            </div>
+
+            <!-- ETAPA 2: Preenchimento de Dados - DOAÇÃO MENSAL -->
+            <div id="donationStep2Mensal" class="donation-step" style="display: none;">
+                <div class="modal-header">
+                    <h2>Complete seus dados</h2>
+                    <button class="close-btn" onclick="closeDonationModal()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Indicador de Tipo de Doação na Etapa 2 -->
+                <div class="donation-type-indicator">
+                    <span>Doação Mensal</span>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Valor selecionado -->
+                    <div class="selected-amount-display">
+                        <p class="amount-value" id="selectedAmountDisplayMensal">R$ 0,00</p>
+                    </div>
+
+                    <!-- Nome -->
+                    <div class="form-group">
+                        <label for="donorNameMensal">Nome: <span style="color: red;">*</span></label>
+                        <input type="text" id="donorNameMensal" placeholder="Digite seu nome completo" maxlength="100"
+                            required>
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="form-group">
+                        <label for="donorPhoneMensal">Whatsapp: <span style="color: red;">*</span></label>
+                        <input type="tel" id="donorPhoneMensal" placeholder="(00) 00000-0000" maxlength="15" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group" style="display: none;">
+                        <label for="donorEmailMensal">Email: <span style="color: red;">*</span></label>
+                        <input type="email" id="donorEmailMensal" placeholder="seu@email.com" maxlength="255" required>
+                    </div>
+
+                    <!-- Documento (CPF) -->
+                    <div class="form-group">
+                        <label for="donorDocumentMensal">CPF: <span style="color: red;">*</span></label>
+                        <input type="text" id="donorDocumentMensal" placeholder="000.000.000-00" maxlength="14"
+                            required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="donate-btn" onclick="generateContribution()">CONTRIBUIR</button>
+                    <button class="back-btn" onclick="goBackToStep1()">← VOLTAR</button>
+                </div>
+            </div>
+
+            <!-- Loading Message -->
+            <div id="donationLoading" class="donation-loading" style="display: none;">
+                <div class="loading-box">
+                    <img src="imagens/logonovo.png" alt="Logo Resgaute" class="loading-logo">
+                    <div class="loading-spinner"></div>
+                    <div class="loading-message">Gerando contribuição, aguarde...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Mobile Button
+    <div class="fixed-mobile-button" id="queroAjudarButton" onclick="openDonationModal()" style="opacity: 0; visibility: hidden; transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;">
+        <span>QUERO AJUDAR</span>
+    </div> -->
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js?v=20260415"></script>
+    <script>
+        // Otimização de carregamento de imagens
+        document.addEventListener('DOMContentLoaded', function () {
+            // Otimizar imagens críticas
+            const criticalImages = document.querySelectorAll('.header-logo-img, .banner-image');
+            criticalImages.forEach(img => {
+                if (img.complete) {
+                    img.classList.add('loaded');
+                } else {
+                    img.addEventListener('load', function () {
+                        this.classList.add('loaded');
+                    });
+                    img.addEventListener('error', function () {
+                        this.style.display = 'none';
+                    });
+                }
+            });
+
+            // Lazy loading para outras imagens
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.classList.add('loaded');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(img => imageObserver.observe(img));
+            }
+
+            // Script para garantir que a imagem PIX seja exibida corretamente
+            const pixImage = document.querySelector('.pix-qr');
+            if (pixImage) {
+                pixImage.style.maxWidth = '300px';
+                pixImage.style.width = 'auto';
+                pixImage.style.height = 'auto';
+                pixImage.style.display = 'block';
+                pixImage.style.margin = '0 auto';
+                pixImage.style.objectFit = 'contain';
+                pixImage.style.objectPosition = 'center';
+
+                pixImage.addEventListener('load', function () {
+                    this.style.visibility = 'visible';
+                    this.classList.add('loaded');
+                });
+
+                setTimeout(function () {
+                    if (pixImage.style.visibility !== 'visible') {
+                        pixImage.style.visibility = 'visible';
+                    }
+                }, 1000);
+            }
+
+            // Modal CNPJ - inicialização
+            const initCnpjModal = function() {
+                const triggers = [document.getElementById('cnpjTrigger'), document.getElementById('cnpjTrigger2')];
+                const modal = document.getElementById('cnpjModal');
+                const img = document.getElementById('cnpjImage');
+
+                if (!modal || !img) return;
+
+                const openModal = (trigger) => {
+                    const src = trigger?.dataset?.img || '';
+                    if (src) img.src = src;
+                    modal.setAttribute('aria-hidden', 'false');
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                };
+
+                const closeModal = () => {
+                    modal.setAttribute('aria-hidden', 'true');
+                    modal.style.display = 'none';
+                    img.removeAttribute('src');
+                    document.body.style.overflow = '';
+                };
+
+                triggers.forEach(trigger => {
+                    if (trigger) {
+                        trigger.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            openModal(trigger);
+                        });
+                    }
+                });
+                
+                modal.addEventListener('click', (e) => {
+                    if (e.target.matches('[data-close-modal], .modal__backdrop')) {
+                        e.preventDefault();
+                        closeModal();
+                    }
+                });
+                
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+                        closeModal();
+                    }
+                });
+            };
+
+            // Inicializar modal CNPJ
+            initCnpjModal();
+
+            // Mostrar botão "QUERO AJUDAR" 
+            const queroAjudarButton = document.getElementById('queroAjudarButton');
+            if (queroAjudarButton) {
+                setTimeout(function() {
+                    queroAjudarButton.style.opacity = '1';
+                    queroAjudarButton.style.visibility = 'visible';
+                }, 10000); // 
+            }
+        });
+    </script>
+
+    <!-- Modal de Detalhes das Despesas -->
+    <div id="expensesModal" class="expenses-modal">
+        <div class="expenses-modal-content">
+            <div class="expenses-modal-header">
+                <h2>Detalhamento das Despesas</h2>
+                <button class="close-btn" onclick="closeExpensesModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="expenses-modal-body">
+                <p class="expenses-intro">Veja como cada centavo é investido no cuidado dos nossos animais:</p>
+                <div class="expenses-detailed-list">
+                    <div class="expense-detail-item">
+                        <div class="expense-detail-header">
+                            <span class="expense-detail-icon">🥘</span>
+                            <span class="expense-detail-title">Ração</span>
+                            <span class="expense-detail-amount">R$ 22.558,70</span>
+                        </div>
+                    </div>
+                    <div class="expense-detail-item">
+                        <div class="expense-detail-header">
+                            <span class="expense-detail-icon">💊</span>
+                            <span class="expense-detail-title">Remédios</span>
+                            <span class="expense-detail-amount">R$ 10.612,21</span>
+                        </div>
+                    </div>
+                    <div class="expense-detail-item">
+                        <div class="expense-detail-header">
+                            <span class="expense-detail-icon">🏥</span>
+                            <span class="expense-detail-title">Veterinário</span>
+                            <span class="expense-detail-amount">R$ 20.750,00</span>
+                        </div>
+                    </div>
+                    <div class="expense-detail-item">
+                        <div class="expense-detail-header">
+                            <span class="expense-detail-icon">🏠</span>
+                            <span class="expense-detail-title">Aluguel</span>
+                            <span class="expense-detail-amount">R$ 10.000,00</span>
+                        </div>
+                    </div>
+                    <div class="expense-detail-item">
+                        <div class="expense-detail-header">
+                            <span class="expense-detail-icon">📦</span>
+                            <span class="expense-detail-title">Outros</span>
+                            <span class="expense-detail-amount">R$ 9.125,47</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="expenses-total" onclick="closeExpensesModal(); scrollToDonation();">
+                    <strong>QUERO AJUDAR ❤️</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmação de Telefone -->
+    <div id="phoneConfirmationModal" class="phone-confirmation-modal" style="display: none;">
+        <div class="phone-confirmation-content">
+            <div class="phone-confirmation-header">
+                <h3>Você Sabia? 🤔</h3>
+            </div>
+            <div class="phone-confirmation-body">
+                <p>Ao deixar o seu número, você pode receber informações para <strong>onde a sua doação está sendo direcionada!</strong><p>
+                <p class="phone-confirmation-subtitle">Podemos contar mais uma vez com você? 🐶🧡</p>
+            </div>
+            <div class="phone-confirmation-footer">
+                <button class="phone-confirmation-btn phone-confirmation-btn-primary" onclick="goBackToFillPhone()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    Voltar para preencher
+                </button>
+                <button class="phone-confirmation-btn phone-confirmation-btn-secondary" onclick="continueWithoutPhone()">
+                    Continuar sem número
+                </button>
+            </div>
+        </div>
+    </div>
+    
+     <!-- ============================================ -->
+    <!-- COMPLETO: -->
+    <!-- ============================================ -->
+    
+    <!-- HTML DO POPUP -->
+    <div id="exitPopup" class="exit-popup" style="display: none;">
+        <div class="exit-popup-overlay"></div>
+        <div class="exit-popup-content">
+            <div class="exit-popup-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 6L9 17l-5-5"/>
+                </svg>
+            </div>
+            <h2 class="exit-popup-title">Espere mais um pouco...</h2>
+            <p class="exit-popup-text">
+                Antes de sair, mais de 500 animais ainda precisam da sua ajuda. Cada doação faz a diferença ❤️
+            </p>
+            <p class="exit-popup-discount">Sua ajuda pode salvar uma vida hoje!</p>
+            <button class="exit-popup-btn" onclick="redirectToSpecialOffer()">
+                Quero ajudar os animais!
+            </button>
+            <button class="exit-popup-close" onclick="closeExitPopup()" aria-label="Fechar">
+                ✕
+            </button>
+        </div>
+    </div>
+
+    <!-- CSS DO POPUP -->
+    <style>
+        .exit-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .exit-popup.show {
+            display: flex !important;
+        }
+
+        .exit-popup[style*="display: block"],
+        .exit-popup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .exit-popup-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .exit-popup-content {
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            padding: 40px 35px;
+            max-width: 480px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin: 0;
+            align-self: center;
+            transform: scale(0.9) translateZ(0);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            will-change: transform, opacity;
+        }
+
+        .exit-popup.show .exit-popup-content {
+            transform: scale(1) translateZ(0);
+            opacity: 1;
+        }
+        
+        .exit-popup:not(.show) .exit-popup-content {
+            transform: scale(0.9) translateZ(0);
+            opacity: 0;
+        }
+
+        .exit-popup-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #F26C9D 0%, #e91e63 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(242, 108, 157, 0.3);
+        }
+
+        .exit-popup-icon svg {
+            width: 32px;
+            height: 32px;
+            color: white;
+            stroke-width: 3;
+        }
+
+        .exit-popup-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            margin: 0 0 15px 0;
+            line-height: 1.3;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .exit-popup-text {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+        }
+
+        .exit-popup-discount {
+            font-size: 0.9rem;
+            color: #F26C9D;
+            font-weight: 600;
+            margin: 0 0 25px 0;
+        }
+
+        .exit-popup-btn {
+            background: linear-gradient(135deg, #F26C9D 0%, #e91e63 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(242, 108, 157, 0.3);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .exit-popup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(242, 108, 157, 0.4);
+        }
+
+        .exit-popup-btn:active {
+            transform: translateY(0);
+        }
+
+        .exit-popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            color: #999;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            line-height: 1;
+        }
+
+        .exit-popup-close:hover {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .exit-popup-content {
+                padding: 30px 25px;
+                max-width: 90%;
+            }
+            
+            .exit-popup-title {
+                font-size: 1.3rem;
+            }
+            
+            .exit-popup-text {
+                font-size: 0.9rem;
+            }
+            
+            .exit-popup-btn {
+                padding: 14px 28px;
+                font-size: 1rem;
+            }
+            
+            .exit-popup-icon {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 15px;
+            }
+            
+            .exit-popup-icon svg {
+                width: 26px;
+                height: 26px;
+            }
+        }
+    </style>
+
+    <!-- JAVASCRIPT DO POPUP -->
+    <script>
+        let exitPopupShown = false;
+        let mouseLeavingPage = false;
+
+        // Função para mostrar o popup de saída
+        function showExitPopup() {
+            if (exitPopupShown) return;
+            
+            const popup = document.getElementById('exitPopup');
+            if (popup) {
+                exitPopupShown = true;
+                popup.style.display = 'block';
+                // Força o reflow para garantir que a animação funcione
+                void popup.offsetWidth;
+                popup.classList.add('show');
+            }
+        }
+
+        // Função para fechar o popup
+        function closeExitPopup() {
+            const popup = document.getElementById('exitPopup');
+            if (popup) {
+                const content = popup.querySelector('.exit-popup-content');
+                // Remove a classe show primeiro para iniciar a animação de saída
+                popup.classList.remove('show');
+                // Força o elemento a manter a posição central durante o fechamento
+                if (content) {
+                    content.style.transform = 'scale(0.9) translateZ(0)';
+                    content.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+                }
+                // Aguarda a animação terminar antes de esconder completamente
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                    exitPopupShown = false;
+                }, 300);
+            }
+        }
+
+        // Função para redirecionar para a oferta especial
+        function redirectToSpecialOffer() {
+            window.location.href = 'https://resgauteoficial.com/redirect/doe/v1/';
+        }
+
+        // Detecta quando o mouse sai da página (topo da tela)
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY <= 0 && !exitPopupShown && !mouseLeavingPage) {
+                mouseLeavingPage = true;
+                showExitPopup();
+            }
+        });
+
+        // Detecta tentativa de fechar aba/janela (botão voltar)
+        window.addEventListener('beforeunload', function(e) {
+            if (!exitPopupShown) {
+                // Mostra o popup antes de sair
+                showExitPopup();
+                // Previne o fechamento imediato
+                e.preventDefault();
+                e.returnValue = '';
+                return '';
+            }
+        });
+
+        // Detecta quando o usuário pressiona o botão voltar do navegador
+        window.addEventListener('popstate', function(e) {
+            if (!exitPopupShown) {
+                showExitPopup();
+                // Adiciona um estado ao histórico para manter na página
+                history.pushState(null, null, window.location.href);
+            }
+        });
+
+        // Prepara o histórico para detectar o botão voltar
+        history.pushState(null, null, window.location.href);
+
+        // Fecha o popup ao clicar no overlay
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('exitPopup');
+            if (popup) {
+                const overlay = popup.querySelector('.exit-popup-overlay');
+                if (overlay) {
+                    overlay.addEventListener('click', closeExitPopup);
+                }
+            }
+        });
+
+        // Exporta funções globalmente
+        window.showExitPopup = showExitPopup;
+        window.closeExitPopup = closeExitPopup;
+        window.redirectToSpecialOffer = redirectToSpecialOffer;
+    </script>
+    <!-- ============================================ -->
+    <!-- FIM  -->
+    <!-- ============================================ -->
+
+</body>
+
+</html>
+</html>
