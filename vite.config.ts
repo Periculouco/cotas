@@ -219,6 +219,49 @@ function edgeFunctionsMiddleware() {
           return;
         }
 
+        // 4. Send Utmify Order
+        if (pathname === '/functions/v1/send-utmify-order' && req.method === 'POST') {
+          try {
+            console.log("Local Vite server: Intercepted send-utmify-order");
+            const body = (await getBody()) as any;
+            const { orderPayload, apiToken } = body;
+
+            if (!apiToken) {
+              throw new Error("Missing Utmify API Token.");
+            }
+
+            const clientIp = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+            if (clientIp && orderPayload && orderPayload.customer && !orderPayload.customer.ip) {
+              orderPayload.customer.ip = Array.isArray(clientIp) ? clientIp[0] : String(clientIp).split(',')[0].trim();
+            }
+
+            const response = await fetch("https://api.utmify.com.br/api-credentials/orders", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "x-api-token": apiToken,
+              },
+              body: JSON.stringify(orderPayload),
+            });
+
+            const responseText = await response.text();
+            console.log("Local Utmify response:", responseText);
+
+            if (!response.ok) {
+              throw new Error(`Utmify API returned error: ${response.status} - ${responseText}`);
+            }
+
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ success: true, data: responseText }));
+          } catch (err: any) {
+            res.statusCode = 400;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ success: false, error: err.message }));
+          }
+          return;
+        }
+
         next();
       });
     }

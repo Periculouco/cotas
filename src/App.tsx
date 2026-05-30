@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Copy, Check, Heart, X, MapPin, AlertCircle, Sparkles } from "lucide-react";
 import QRCode from "qrcode";
 import { supabase } from "./config/supabaseClient";
-import { resolvePixGateway, PIX_GATEWAY_FUNCTION, PARADISE_API_KEY, PARADISE_PRODUCT_HASH, PIXZY_API_TOKEN } from "./config/pixGateway";
+import { resolvePixGateway, PIX_GATEWAY_FUNCTION, PARADISE_API_KEY, PARADISE_PRODUCT_HASH, PIXZY_API_TOKEN, UTMIFY_API_TOKEN } from "./config/pixGateway";
 
 // Global Configuration matching script.js
 const IMAGE_BASE_URL = "https://resgauteoficial.org";
@@ -49,6 +49,86 @@ export default function App() {
 
   // Tracking details
   const [utms, setUtms] = useState<Record<string, string>>({});
+
+  // Send order tracking to Utmify
+  const sendUtmifyTracking = async (orderId: string, status: "waiting_payment" | "paid", amountCents: number) => {
+    if (!UTMIFY_API_TOKEN) {
+      console.log("Utmify API token not set. Skipping tracking.");
+      return;
+    }
+
+    try {
+      const formatUtcDate = (d: Date) => {
+        const pad = (n: number) => String(n).padStart(2, "0");
+        return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}`;
+      };
+
+      const now = new Date();
+      const createdAtStr = formatUtcDate(now);
+      const approvedDateStr = status === "paid" ? createdAtStr : null;
+
+      const cleanPhone = donorPhone ? donorPhone.replace(/\D/g, "") : null;
+      const cleanDocument = donorCpf ? donorCpf.replace(/\D/g, "") : null;
+
+      const name = donorName || "Doador Anonimo";
+      const email = donorEmail || `${name.toLowerCase().replace(/\s+/g, "")}@cotas.org`;
+
+      const orderPayload = {
+        orderId: orderId,
+        platform: "Cotas",
+        paymentMethod: "pix",
+        status: status,
+        createdAt: createdAtStr,
+        approvedDate: approvedDateStr,
+        refundedAt: null,
+        customer: {
+          name: name,
+          email: email,
+          phone: cleanPhone,
+          document: cleanDocument,
+          country: "BR"
+        },
+        products: [
+          {
+            id: "cotas",
+            name: "Cotas",
+            planId: null,
+            planName: null,
+            quantity: 1,
+            priceInCents: amountCents
+          }
+        ],
+        trackingParameters: {
+          src: utms.src || null,
+          sck: utms.sck || null,
+          utm_source: utms.utm_source || null,
+          utm_campaign: utms.utm_campaign || null,
+          utm_medium: utms.utm_medium || null,
+          utm_content: utms.utm_content || null,
+          utm_term: utms.utm_term || null
+        },
+        commission: {
+          totalPriceInCents: amountCents,
+          gatewayFeeInCents: 0,
+          userCommissionInCents: amountCents
+        },
+        isTest: false
+      };
+
+      console.log(`Invoking send-utmify-order with status: ${status}`);
+      const { data, error } = await supabase.functions.invoke("send-utmify-order", {
+        body: {
+          orderPayload,
+          apiToken: UTMIFY_API_TOKEN
+        }
+      });
+
+      if (error) throw error;
+      console.log("Utmify tracking response:", data);
+    } catch (err) {
+      console.error("Failed to send Utmify tracking:", err);
+    }
+  };
 
   // Capture UTM parameters and Vturb Video on load
   useEffect(() => {
@@ -133,6 +213,7 @@ export default function App() {
             if (data?.status === "paid" || data?.status === "approved") {
               setPaymentStatus("paid");
               setDonationStep(5);
+              sendUtmifyTracking(transactionId, "paid", Math.round(getFinalAmount() * 100));
               if (pollingIntervalRef.current) clearInterval(pollingIntervalRef.current);
             } else if (data?.status === "expired" || data?.status === "failed" || data?.status === "canceled") {
               setPaymentStatus(data.status);
@@ -150,6 +231,7 @@ export default function App() {
             if (data?.status === "paid" || data?.status === "approved") {
               setPaymentStatus("paid");
               setDonationStep(5);
+              sendUtmifyTracking(transactionId, "paid", Math.round(getFinalAmount() * 100));
               if (pollingIntervalRef.current) clearInterval(pollingIntervalRef.current);
             } else if (data?.status === "expired" || data?.status === "canceled") {
               setPaymentStatus(data.status);
@@ -331,6 +413,9 @@ export default function App() {
         const generatedBase64 = await QRCode.toDataURL(data.pixCode);
         setQrCodeBase64(generatedBase64);
       }
+
+      // Trigger Utmify tracking for waiting_payment
+      sendUtmifyTracking(data.transactionId, "waiting_payment", finalAmountCents);
 
       setDonationStep(4); // Show QR screen
     } catch (err: any) {

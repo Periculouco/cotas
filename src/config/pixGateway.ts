@@ -16,15 +16,18 @@ if (urlParams.get("clearKeys") === "true" || urlParams.get("clear_keys") === "tr
   localStorage.removeItem("PARADISE_API_KEY");
   localStorage.removeItem("PARADISE_PRODUCT_HASH");
   localStorage.removeItem("PIXZY_API_TOKEN");
+  localStorage.removeItem("UTMIFY_API_TOKEN");
 }
 
 const urlParadiseKey = urlParams.get("paradise_key") || urlParams.get("apiKey");
 const urlParadiseHash = urlParams.get("paradise_hash") || urlParams.get("productHash");
 const urlPixzyToken = urlParams.get("pixzy_token") || urlParams.get("apiToken");
+const urlUtmifyToken = urlParams.get("utmify_token") || urlParams.get("utmifyToken");
 
 if (urlParadiseKey) localStorage.setItem("PARADISE_API_KEY", urlParadiseKey);
 if (urlParadiseHash) localStorage.setItem("PARADISE_PRODUCT_HASH", urlParadiseHash);
 if (urlPixzyToken) localStorage.setItem("PIXZY_API_TOKEN", urlPixzyToken);
+if (urlUtmifyToken) localStorage.setItem("UTMIFY_API_TOKEN", urlUtmifyToken);
 
 export const PARADISE_API_KEY = 
   localStorage.getItem("PARADISE_API_KEY") || 
@@ -40,6 +43,11 @@ export const PIXZY_API_TOKEN =
   localStorage.getItem("PIXZY_API_TOKEN") || 
   (import.meta.env.VITE_PIXZY_API_TOKEN as string) || 
   "122|VDNCx2nhrWOEDnUqC8pCN5Le1WP2xsAgb0PsRomN47ce4e1a";
+
+export const UTMIFY_API_TOKEN = 
+  localStorage.getItem("UTMIFY_API_TOKEN") || 
+  (import.meta.env.VITE_UTMIFY_API_TOKEN as string) || 
+  "";
 
 // Override de teste por URL (?gw=pixzy) sem mexer no padrão de produção:
 export function resolvePixGateway(): PixGateway {
