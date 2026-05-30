@@ -70,7 +70,7 @@ export default function App() {
       const cleanPhone = donorPhone ? donorPhone.replace(/\D/g, "") : null;
       const cleanDocument = donorCpf ? donorCpf.replace(/\D/g, "") : null;
 
-      const name = donorName || "Doador Anonimo";
+      const name = donorName || "Cotas";
       const email = donorEmail || `${name.toLowerCase().replace(/\s+/g, "")}@cotas.org`;
 
       const orderPayload = {
@@ -336,7 +336,7 @@ export default function App() {
 
   const generateContribution = async () => {
     // Validate inputs
-    let name = "Anonimo";
+    let name = "Cotas";
     let phone = donorPhone.replace(/\D/g, "");
     let email = donorEmail.trim();
     let cpf = donorCpf.replace(/\D/g, "");
