@@ -1229,6 +1229,17 @@ export default function App() {
                       {copiedPix ? "Código Copiado!" : "Copiar Código PIX"}
                     </button>
 
+                    <p style={{
+                      fontSize: "0.85rem",
+                      color: "#475569",
+                      textAlign: "center",
+                      margin: "12px 0 6px 0",
+                      lineHeight: "1.4",
+                      fontWeight: "500"
+                    }}>
+                      Utilizamos a Pagar Me como parceira para processar nossos recebimentos, seus dados estão totalmente seguros ❤️
+                    </p>
+
                     <div className="polling-container">
                       <div className="polling-spinner"></div>
                       <span>
